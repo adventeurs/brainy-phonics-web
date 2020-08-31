@@ -11,7 +11,7 @@
       <button
         class="menu__button"
         [ngClass]="{ 'figures-of-speech': !isWSMenu }"
-        routerLink="learn"
+        routerLink="{{ option.text }}"
         [style.background-color]="bgColor(option.color)"
       >
         <h2

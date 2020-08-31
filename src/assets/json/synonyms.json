@@ -1,0 +1,40 @@
+{
+  "display": "Many actions words just add <span class='suffix'>ed</span> and <span class='suffix'>ing</span> to the base word without making any other changes.",
+  "wordList": [
+    {
+      "words": ["end", "finish"],
+      "image": "",
+      "audio": ["phoneme-I-long.mp3", "five.mp3"]
+    },
+    {
+      "words": ["begin", "start"],
+      "image": "",
+      "audio": ["phoneme-I-long.mp3", "five.mp3"]
+    },
+    {
+      "words": ["shut", "close"],
+      "image": "",
+      "audio": []
+    },
+    {
+      "words": ["fix", "mend"],
+      "image": "",
+      "audio": []
+    },
+    {
+      "words": ["hard", "difficult"],
+      "image": "",
+      "audio": []
+    },
+    {
+      "words": ["shove", "push"],
+      "image": "",
+      "audio": []
+    },
+    {
+      "words": ["yell", "shout"],
+      "image": "",
+      "audio": []
+    }
+  ]
+}

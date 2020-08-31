@@ -1,24 +1,31 @@
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from "@angular/router";
 
-import { LearnComponent } from 'src/app/components/learn/learn.component';
-import { MenuComponent } from 'src/app/components/menu/menu.component';
-import { NgModule } from '@angular/core';
-import { SharedModule } from 'src/app/shared/shared.module';
-import { WordStructuresComponent } from './word-structures.component';
+import { LearnComponent } from "src/app/components/learn/learn.component";
+import { MenuComponent } from "src/app/components/menu/menu.component";
+import { NgModule } from "@angular/core";
+import { SharedModule } from "src/app/shared/shared.module";
+import { WordStructuresComponent } from "./word-structures.component";
 
 const routes: Routes = [
   {
-    path: 'word-structures',
+    path: "word-structures",
     component: WordStructuresComponent,
     children: [
-      { path: '', component: MenuComponent },
-      { path: 'learn', component: LearnComponent },
+      { path: "", component: MenuComponent },
+      { path: "learn", component: LearnComponent },
       {
-        path: 'figures-of-speech',
-        component: MenuComponent,
-        children: [{ path: 'learn', component: LearnComponent }]
+        path: "figures-of-speech",
+        component: MenuComponent
+      },
+      {
+        path: "figures-of-speech/:param",
+        component: LearnComponent
       }
     ]
+  },
+  {
+    path: "word-structures/:structure",
+    component: LearnComponent
   }
 ];
 
