@@ -2,7 +2,7 @@ import { AlphabetLearnComponent } from "./pages/alphabet-learn/alphabet-learn.co
 import { AlphabetQuizComponent } from "./pages/alphabet-quiz";
 import { AppComponent } from "./app.component";
 import { BrowserModule } from "@angular/platform-browser";
-import { CardComponent } from "./components/card/card.component";
+import { CardComponent } from "./pages/word-structures/components/card/card.component";
 import { CoinsComponent } from "./pages/coins/coins.component";
 import { FirstCategoriesComponent } from "./pages/first-categories/first-categories.component";
 import { FirstConsonantsDetailsComponent } from "./pages/first-categories/first-consonants-details/first-consonants-details.component";

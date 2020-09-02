@@ -92,7 +92,6 @@ export class PhonemeLearnComponent implements OnInit, OnDestroy, AfterViewInit {
 
     this.phonemeAudio = new Audio();
     this.phonemeAudio.src = this.phoneme.audio;
-    console.log(this.phonemeAudio);
     this.phonemeAudio.load();
 
     this.ex1Audio = new Audio();

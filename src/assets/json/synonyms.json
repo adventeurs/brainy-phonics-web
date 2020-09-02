@@ -4,12 +4,12 @@
     {
       "words": ["end", "finish"],
       "image": "",
-      "audio": ["phoneme-I-long.mp3", "five.mp3"]
+      "audio": ["phoneme-I-long.mp3", "sound-OT.mp3"]
     },
     {
       "words": ["begin", "start"],
       "image": "",
-      "audio": ["phoneme-I-long.mp3", "five.mp3"]
+      "audio": ["sound-W.mp3", "sound-X.mp3"]
     },
     {
       "words": ["shut", "close"],
