@@ -1,21 +1,17 @@
 <!-- <section class="learn" *ngIf="wsData$ | async as wsData"> -->
 <section class="learn" *ngIf="wsData">
-  <h1 [innerHtml]="wsData.display" class="learn__headline margin">
-    <!-- Many actions words just add <span class="suffix">ed</span> and
-    <span class="suffix">ing</span> to the base word without making any other
-    changes. -->
-  </h1>
+  <h1 [innerHtml]="wsData.display" class="learn__headline margin"></h1>
   <button
     id="back"
     class="button"
     (click)="updateIndex('back', wsData.wordList.length)"
   ></button>
   <div class="learn-word__image-container">
-    <!-- <img
+    <img
       class="learn-word__image"
-      [src]="getImagePath(wsData[index].wordList[0])"
-      [alt]="wsData[index].wordList[0]"
-    /> -->
+      [src]="img"
+      [alt]="wsData.wordList[index].image"
+    />
   </div>
   <button
     *ngIf="index != wsData.wordList.length - 1"
@@ -28,7 +24,7 @@
       #wordHTML
       class="learn-word"
       *ngFor="let word of wsData.wordList[index].words; let i = index"
-      [ngClass]="{ animateLetter: audio[i].animate }"
+      [ngClass]="{ animateLetter: content[i].animate }"
       (click)="play(wordHTML)"
     >
       {{ word }}

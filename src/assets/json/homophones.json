@@ -1,0 +1,46 @@
+{
+  "display": "Homophones, or homonyms, are words with the same sounds but different meanings.",
+  "category": "homophones",
+  "wordList": [
+    {
+      "words": ["be", "bee"],
+      "audio": ["be-bee_word_only.mp3", "be-bee_word_only.mp3"]
+    },
+    {
+      "words": ["horse", "hoarse"],
+      "audio": ["Horse.mp3", "Horse.mp3"]
+    },
+    {
+      "words": ["I", "eye"],
+      "audio": ["I-eye_word_only.mp3", "I-eye_word_only.mp3"]
+    },
+    {
+      "words": ["meet", "meat"],
+      "audio": ["meet-meat_x_word_only.mp3", "meet-meat_x_word_only.mp3"]
+    },
+    {
+      "words": ["one", "won"],
+      "audio": ["one-won_word_only.mp3", "one-won_word_only.mp3"]
+    },
+    {
+      "words": ["peek", "peak"],
+      "audio": []
+    },
+    {
+      "words": ["sail", "sale"],
+      "audio": ["sail-sale_word_only.mp3", "sail-sale_word_only.mp3"]
+    },
+    {
+      "words": ["see", "sea"],
+      "audio": ["see-sea_word_only.mp3", "see-sea_word_only.mp3"]
+    },
+    {
+      "words": ["would", "wood"],
+      "audio": ["wood-would_word_only.mp3", "wood-would_word_only.mp3"]
+    },
+    {
+      "words": ["plain", "plane"],
+      "audio": ["plane-plain_word_only.mp3", "plane-plain_word_only.mp3"]
+    }
+  ]
+}

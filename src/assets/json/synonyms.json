@@ -1,40 +1,38 @@
 {
-  "display": "Many actions words just add <span class='suffix'>ed</span> and <span class='suffix'>ing</span> to the base word without making any other changes.",
+  "display": "Synonyms are words which have the same or close to the same meaning.",
+  "category": "synonyms",
   "wordList": [
     {
       "words": ["end", "finish"],
-      "image": "",
-      "audio": ["phoneme-I-long.mp3", "sound-OT.mp3"]
+      "audio": ["end.mp3", "end.mp3"]
     },
     {
       "words": ["begin", "start"],
-      "image": "",
-      "audio": ["sound-W.mp3", "sound-X.mp3"]
+      "audio": ["", "start.mp3"]
     },
     {
       "words": ["shut", "close"],
-      "image": "",
-      "audio": []
+      "audio": ["", ""]
     },
     {
       "words": ["fix", "mend"],
-      "image": "",
-      "audio": []
+      "audio": ["", ""]
+    },
+    {
+      "words": ["easy", "simple"],
+      "audio": ["easy.mp3", "Simple.mp3"]
     },
     {
       "words": ["hard", "difficult"],
-      "image": "",
-      "audio": []
+      "audio": ["hard.mp3", "difficult.mp3"]
     },
     {
       "words": ["shove", "push"],
-      "image": "",
-      "audio": []
+      "audio": ["", ""]
     },
     {
       "words": ["yell", "shout"],
-      "image": "",
-      "audio": []
+      "audio": ["yell.mp3", ""]
     }
   ]
 }

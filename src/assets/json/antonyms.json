@@ -1,0 +1,38 @@
+{
+  "display": "Antonyms are words which have quite opposite meanings.",
+  "category": "antonyms",
+  "wordList": [
+    {
+      "words": ["boring", "exciting"],
+      "audio": ["phoneme-I-long.mp3", "sound-OT.mp3"]
+    },
+    {
+      "words": ["hot", "cold"],
+      "audio": ["sound-W.mp3", "sound-X.mp3"]
+    },
+    {
+      "words": ["day", "night"],
+      "audio": [""]
+    },
+    {
+      "words": ["big", "little"],
+      "audio": []
+    },
+    {
+      "words": ["old", "young"],
+      "audio": []
+    },
+    {
+      "words": ["sweet", "sour"],
+      "audio": []
+    },
+    {
+      "words": ["naughty", "nice"],
+      "audio": []
+    },
+    {
+      "words": ["polite", "rude"],
+      "audio": []
+    }
+  ]
+}

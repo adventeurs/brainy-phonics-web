@@ -1,0 +1,61 @@
+{
+  "display": "Homophones, or homonyms, are words with the same sounds but different meanings.",
+  "category": "homophones",
+  "wordList": [
+    {
+      "words": ["bat"],
+      "audio": ["bat.mp3"],
+      "sentence": "He used his baseball bat to chase away a bat."
+    },
+    {
+      "words": ["bark"],
+      "audio": ["bark.mp3"],
+      "sentence": "My dog will bark when I throw a piece of tree bark for him to chase."
+    },
+    {
+      "words": ["fly"],
+      "audio": ["fly.mp3"],
+      "sentence": "Did you see the fly fly in his mouth?"
+    },
+    {
+      "words": ["gum"],
+      "audio": [""],
+      "sentence": "A piece of bubble gum got stuck between two teeth on my gum."
+    },
+    {
+      "words": ["jam"],
+      "audio": [""],
+      "sentence": "I ate my bread and jam when our car was stopped in a traffic jam."
+    },
+    {
+      "words": ["pen"],
+      "audio": [""],
+      "sentence": "With his pen he counted how many pigs were in the pen."
+    },
+    {
+      "words": ["pitcher"],
+      "audio": ["pitcher.mp3"],
+      "sentence": "The pitcher was so thirsty he drank a whole pitcher of lemonade."
+    },
+    {
+      "words": ["rest"],
+      "audio": ["rest.mp3"],
+      "sentence": "Rest quietly until the rest of the children come."
+    },
+    {
+      "words": ["seal"],
+      "audio": ["seal.mp3"],
+      "sentence": "After you seal each letter use the stamps with the seal balancing a ball."
+    },
+    {
+      "words": ["second"],
+      "audio": ["second.mp3"],
+      "sentence": "She came in second in the race and lost by only one second."
+    },
+    {
+      "words": ["watch"],
+      "audio": ["watch.mp3"],
+      "sentence": "Watch me while I hide my dad’s watch in his shoe."
+    }
+  ]
+}

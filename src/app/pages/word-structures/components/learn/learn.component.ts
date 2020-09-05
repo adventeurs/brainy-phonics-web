@@ -1,10 +1,10 @@
 import { Component, OnInit, OnDestroy } from "@angular/core";
-
 import { HttpClient } from "@angular/common/http";
 import { Subscription } from "rxjs";
 import { switchMap } from "rxjs/operators";
 import { ActivatedRoute, ParamMap } from "@angular/router";
-import { LearnWord } from "src/app/types/learnWord";
+import { LearnWord } from "src/app/types/learn-word";
+import { getAudioPath, getImagePath } from "../../utility";
 
 @Component({
   selector: "app-learn",
@@ -14,9 +14,10 @@ import { LearnWord } from "src/app/types/learnWord";
 export class LearnComponent implements OnInit, OnDestroy {
   subscription: Subscription;
   wsData: any;
+  img: string;
   index = 0;
 
-  audio: LearnWord[] = [];
+  content: LearnWord[] = [];
 
   constructor(private http: HttpClient, private route: ActivatedRoute) {}
 
@@ -29,71 +30,74 @@ export class LearnComponent implements OnInit, OnDestroy {
       )
       .subscribe(json => {
         this.wsData = json;
-        this.loadAudio();
+        this.loadContent();
       });
   }
 
   ngOnDestroy() {
     this.subscription.unsubscribe();
-
-    this.audio.forEach(audio => {
-      audio.audio.pause();
-      audio = null;
-    });
+    this.pauseAudio();
   }
 
-  loadAudio() {
+  loadContent() {
     const { wordList } = this.wsData;
+    this.img = getImagePath(this.wsData.category, wordList[this.index].words);
 
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < this.wsData.wordList[this.index].words.length; i++) {
       let audio = new Audio();
-      audio.src = this.getAudioPath(wordList[this.index].audio[i]);
+      audio.src = getAudioPath(
+        this.wsData.category,
+        wordList[this.index].audio[i]
+      );
       audio.load();
-      this.audio.push(new LearnWord(audio));
+      this.content[i] = new LearnWord(audio);
     }
 
     this.playAudio(0);
   }
 
   playAudio(index) {
-    if (index < 2) {
-      this.audio[index].animate = true;
-      this.audio[index].audio.play();
-      this.audio[index].audio.addEventListener(
-        "ended",
-        () => {
-          this.audio[index].animate = false;
-          return this.playAudio(index + 1);
-        },
-        false
-      );
-    }
+    setTimeout(() => {
+      if (index < this.wsData.wordList[this.index].words.length) {
+        this.content[index].animate = true;
+        this.content[index].audio.play();
+        this.content[index].audio.addEventListener(
+          "ended",
+          () => {
+            this.content[index].animate = false;
+            return this.playAudio(index + 1);
+          },
+          { once: true }
+        );
+      }
+    }, 250);
+  }
+
+  pauseAudio() {
+    this.content.forEach(audio => {
+      audio.audio.pause();
+      audio = null;
+    });
   }
 
   play($event) {
     let index = this.wsData.wordList[this.index].words.indexOf(
       $event.innerHTML.trim()
     );
-    this.audio[index].audio.play();
-  }
-
-  getAudioPath(word) {
-    return `assets/audio/phonemes/${word}`;
-  }
-
-  getImagePath(word: string) {
-    return `assets/img/word-structures/${word}.png`;
+    this.content[index].audio.play();
   }
 
   updateIndex(type: string, arrayLength: number) {
     switch (type) {
       case "back":
         this.index = this.index > 0 ? this.index - 1 : this.index;
-        this.loadAudio();
+        this.pauseAudio();
+        this.loadContent();
         break;
       case "forward":
         this.index = this.index < arrayLength - 1 ? this.index + 1 : this.index;
-        this.loadAudio();
+        this.pauseAudio();
+        this.loadContent();
         break;
     }
   }

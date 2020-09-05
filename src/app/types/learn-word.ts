@@ -1,6 +1,6 @@
 export class LearnWord {
   audio: HTMLAudioElement;
-  img?: string;
+  img: string;
   animate = false;
 
   constructor(audio, img?) {

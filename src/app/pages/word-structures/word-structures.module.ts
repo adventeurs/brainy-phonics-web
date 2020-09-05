@@ -5,10 +5,11 @@ import { MenuComponent } from "src/app/pages/word-structures/components/menu/men
 import { NgModule } from "@angular/core";
 import { SharedModule } from "src/app/shared/shared.module";
 import { WordStructuresComponent } from "./word-structures.component";
+import { WordStructureQuizComponent } from "./components/word-structure-quiz/word-structure-quiz.component";
 
 const routes: Routes = [
   {
-    path: "",
+    path: "word-structures",
     component: WordStructuresComponent,
     children: [
       { path: "", component: MenuComponent },
@@ -29,11 +30,20 @@ const routes: Routes = [
   {
     path: "word-structures/:structure",
     component: LearnComponent
+  },
+  {
+    path: "word-structures/quiz",
+    component: WordStructureQuizComponent
   }
 ];
 
 @NgModule({
   imports: [SharedModule, RouterModule.forChild(routes)],
-  declarations: [WordStructuresComponent, MenuComponent, LearnComponent]
+  declarations: [
+    WordStructuresComponent,
+    MenuComponent,
+    LearnComponent,
+    WordStructureQuizComponent
+  ]
 })
 export class WordStructuresModule {}
